@@ -34,6 +34,15 @@ app.use("/api/v1/job", jobRoute);
 
 //       /api/v1/auth/register
 
+app.use("*", (req, res) => {
+  res.status(404).json({ errorMessage: "Route not found!" });
+});
+
+app.use((error, req, res, next) => {
+  console.log(error);
+  res.status(500).json({ errorMessage: "Something went wrong!" });
+});
+
 const PORT = process.env.PORT
 
 app.listen(PORT, () => {

@@ -1,0 +1,9 @@
+{
+    "debug.confirmOnExit": "always",
+    "debug.console.acceptSuggestionOnEnter": "on",
+    "launch": {
+        
+        "configurations": [],
+        "compounds": []
+    }
+}
