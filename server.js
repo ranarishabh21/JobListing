@@ -3,6 +3,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 const authRoute = require("./routes/auth");
+const jobRoute = require("./routes/job")
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -29,6 +30,7 @@ app.get("/api/health", (req, res) => {
 
 
 app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/job", jobRoute);
 
 //       /api/v1/auth/register
 

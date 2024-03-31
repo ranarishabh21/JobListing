@@ -1,12 +1,13 @@
 {
-    "version": "0.2.0",
     "configurations": [
-
-      {
-        "type": "node",
+    {
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/.js",
         "request": "launch",
-        "name": "No Configuration",
-        "program": "${workspaceFolder}\\bin\\www"
-      }
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "node"
+    }
     ]
-  }
+}
